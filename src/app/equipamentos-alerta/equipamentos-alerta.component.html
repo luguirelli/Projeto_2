@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="html">
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class="body">
+
+      <div class="equipamentosAlerta" *ngFor="let equipamentoAlerta of equipamentosAlerta">
+          <table id="table" class="centered highligh">
+              <thead>
+                <tr>
+                    <th id="header">Equipamento</th>
+                    <th id="header">Erro</th>
+                    <th id="header">Descrição</th>
+                    
+
+                </tr>
+              </thead>
+      
+              <tbody>
+                <td>
+                    {{this.equipamentoAlerta.equipamentName}}
+                </td>
+
+                <td>
+                    {{this.equipamentoAlerta.mistakeName}}
+                </td>
+
+                <td>
+
+                    {{this.equipamentoAlerta.description}}
+                </td>
+                 
+                  
+
+              </tbody>
+          </table>
+
+      </div>
+      
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
+      
+
+
+
+

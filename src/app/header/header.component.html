@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="main-header">
+<nav> 
+    <div class="nav-wrapper">
+      <a routerLink= "/home" class="brand-logo">FastEMag</a>
+      <ul id="nav-mobile" class="links">
+        <!-- <li><a routerLink="/home">Home</a></li> -->
+        <li routerLinkActive=""><a routerLink="/equipaments">Equipamentos</a></li>
+        <li routerLinkActive=""><a routerLink="/profissionais">Profissionais</a></li>
+        <li routerLinkActive=""><a routerLink="/equipamentos/alerta">Equipamentos em Alerta</a></li>
+        <li routerLinkActive=""><a routerLink="/preventivas">Próximas Preventivas</a></li>
+        <li routerLinkActive=""><a routerLink="/historico">Próximas Preventivas</a></li>
+        <li><a class="marrom-claro-bg" (click)="logout()">Logout<i class="fa fa-sign-out right"></i></a></li>
+      </ul>
+      <a class="waves-effect waves-light btn">button</a>
+    </div>
+  </nav>
+  </header>
+
+  <!-- <div class="container fundo">
+    <img src="./assets/fundo.jpg" width="1265px" height="815px">
+  </div> -->
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>

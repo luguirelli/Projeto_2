@@ -1,0 +1,11 @@
+.carousel{
+    height: 550px;
+    margin-left: -11% !important;
+    margin-top: -5%;
+    position: absolute;
+}
+.carousel .carousel-item > img {
+    width: 210%;
+    height: 165%;
+}
+

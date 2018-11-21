@@ -1,0 +1,52 @@
+.container {
+    width: 100%;
+    max-height: 100%;
+}
+.nav-wrapper{
+    background-color: rgb(106, 184, 214);
+}
+p{
+    font-family: 'Helvetica Neue';
+    font-size: 100px;
+}
+
+.ngx-pagination .current{
+    background-color: rgb(106, 184, 214);
+}
+
+.links{
+    margin-top:16px;
+    margin-left: 300px;
+    font-size: 10000px;
+    font-weight: 100;
+    font-family: cursive;
+    font-style: italic;
+   
+
+}
+
+.brand-logo{
+    color: rgb(110, 109, 109);
+    font-size: 24px;
+    font-weight: 1000;
+    font-family: cursive;
+    margin-top: 3px;
+    margin-left: 100px;
+    font-style: italic
+}
+/* .material-icons{
+    color: forestgreen;
+}
+#verde{
+    color: forestgreen;
+} */
+
+.marrom-claro-bg {
+    background-color: rgb(106, 184, 214);
+    margin-left: 200px;
+}
+/* .fundo{
+    opacity: 0.5;
+    margin-left: 0;
+    position: relative;
+} */

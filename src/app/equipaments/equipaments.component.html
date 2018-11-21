@@ -1,0 +1,121 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <div id="areaPesquisa">
+    <div id="pesquisa"><p><b>Pesquise o equipamento:</b></p></div>
+      <input type="text" id="textarea1" class="materialize-textarea" placeholder="Equipamento">
+  </div>
+<br>
+      
+
+      <div class="equipament">
+          <table id="table" class="highlight centered" *ngFor="let equipamento of equipamentos">
+              <thead>
+                <tr>
+                    <th id="header">Código</th>
+                    <th id="header">Nome</th>
+                    <th id="header">Número de Controle</th>
+                    <th id="header">Disponibilidade</th>
+                    <th colspan="3" id="header"></th>
+
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>
+                    {{this.equipamento.id}}
+                  </td>
+                  <td>
+                    {{this.equipamento.name}}
+                  </td>
+                  <td>
+                    {{this.equipamento.controlNumber}}
+                  </td>
+                  <td>
+                    {{this.equipamento.status}}
+                  </td>
+                
+                  <td>
+                      <a class="modal-trigger" data-target="modal1" (click)="this.abrirDetalhes(this.equipamento.id)">
+                          <i class="material-icons">remove_red_eye</i>
+                      </a>
+                  </td>
+                  <td>
+                      <a class="modal-trigger" data-target="modal2" (click)="this.abrirDetalhes(cardapio.id)">
+                          <i class="material-icons">edit</i>
+                      </a>
+                  </td>
+                  <td>
+                      <a class="modal-trigger " data-target="modal6" (click)="this.deletarEquipamento(this.equipamento.id)">
+                          <i class="material-icons">delete</i>
+                      </a>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+
+      </div>
+      
+
+      <a class="waves-effect waves-light btn modal-trigger" id="fundo" data-target="#modal3"><!-- Botão de criação -->
+        Adicionar Equipamento
+        <i class="material-icons" id="maisUm" >exposure_plus_1</i>
+    </a> 
+
+    <div id="modal1" class="modal max"> 
+            <div *ngIf="this.details" class="modal-content">
+                <h4> <i class="material-icons left">remove_red_eye</i>
+                     Detalhes do equipamento            
+                </h4>
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Data de Aquisição</th>
+                            <th>Próxima Preventiva</th>
+                            <th>Setor</th>
+                            <th>Grau de Utilização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>  
+                                <p>{{this.details.model }} </p>
+                            </td>
+                            <td>
+                                <p>{{this.details.acquisitionDate }} </p>
+                            </td>
+                            <td>
+                                <p>{{this.details.nextPreventive}} </p>
+                            </td>
+                            <td>
+                                <p>{{this.details.sector}}</p>
+                            </td>
+
+                            <td>
+                                <p> {{this.details.importance}} </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="modal-footer detalhe">
+                <a class="modal-action modal-close waves-effect waves-teal btn-flat">Fechar</a>
+            </div>
+        </div>
+
+    <div id="modal6" class="modal"> 
+        <div class="modal-content">
+            <h4> Equipamento deletado com sucesso! </h4>
+        </div>
+
+     <div class="modal-footer" id="botao">
+        <button class="modal-action modal-close waves-effect waves-light  waves-teal btn-flat"  (click)="this.getEquipamentos()">Fechar</button>
+     </div>
+   </div>
+            
+<br><br><br>
+
+<router-outlet></router-outlet>
+
